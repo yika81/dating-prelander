@@ -9,35 +9,34 @@
   body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
+    color: #222;
   }
 
   .container {
     max-width: 420px;
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
+    background: #ffffff;
     border-radius: 20px;
+    padding: 25px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     position: relative;
   }
 
   h1 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #fff;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    color: #222;
   }
 
   p {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #f8f8f8;
+    color: #444;
   }
 
   .btn {
@@ -49,16 +48,16 @@
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.25s;
   }
 
   .btn-yes {
-    background: #ff4b5c;
+    background: #2d89ef;
     color: #fff;
   }
 
   .btn-yes:hover {
-    background: #ff2d3c;
+    background: #1a5fc1;
     transform: scale(1.05);
   }
 
@@ -70,39 +69,33 @@
 
   .hidden { display: none; }
 
-  /* Optional small sparkle effect */
-  .sparkle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.imgur.com/MsVtT0S.png') repeat;
-    pointer-events: none;
-    opacity: 0.1;
-    animation: shimmer 3s linear infinite;
+  .image-section {
+    margin-bottom: 20px;
   }
 
-  @keyframes shimmer {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
+  .image-section img {
+    width: 100%;
+    border-radius: 15px;
   }
 </style>
 </head>
 <body>
 
-<div class="sparkle"></div>
-
 <!-- Step 1: Age Gate -->
 <div class="container" id="step1">
-  <h1>⚠️ Adult Content</h1>
+  <h1>⚠️ Adult Content Warning</h1>
   <p>You must be 18+ to continue. Are you old enough?</p>
   <a class="btn btn-yes" onclick="showStep2()">I am 18+</a>
   <a class="btn btn-no" href="https://www.google.com">Leave</a>
 </div>
 
-<!-- Step 2: Main CTA -->
+<!-- Step 2: Main CTA with image -->
 <div class="container hidden" id="step2">
-  <h1>🔥 Singles Near You Are Online!</h1>
-  <p>See who’s waiting to chat. Local singles are looking now — free to view.</p>
+  <div class="image-section">
+    <img src="https://images.unsplash.com/photo-1596495577886-d920f5d23033?fit=crop&w=800&q=80" alt="Smiling adults">
+  </div>
+  <h1>🔥 Chat With Local Singles Now</h1>
+  <p>See who’s nearby and ready to connect. Profiles are free to view!</p>
   <a class="btn btn-yes" href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">View Profiles</a>
 </div>
 

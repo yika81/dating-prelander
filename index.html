@@ -3,119 +3,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Local Singles Near You</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Singles Near You</title>
-  <meta name="description" content="Browse profiles of adults online. 18+ only.">
+  <meta name="robots" content="noindex,nofollow">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
     }
+
     .container {
       max-width: 420px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 40px auto;
       background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     }
-    h1 { font-size: 24px; text-align: center; margin-bottom: 10px; }
-    h2 { font-size: 16px; font-weight: normal; text-align: center; margin-bottom: 20px; color: #555; }
-    p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
-    ul { padding-left: 20px; margin-bottom: 20px; }
-    ul li { font-size: 14px; margin-bottom: 8px; }
-    .hero {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #222;
     }
-    .age-box { text-align: center; margin: 25px 0; }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
     .btn {
       display: block;
       width: 100%;
       padding: 14px;
       margin: 10px 0;
       font-size: 16px;
-      text-align: center;
-      border: none;
+      font-weight: bold;
       border-radius: 6px;
-      cursor: pointer;
       text-decoration: none;
-      transition: background 0.3s;
+      cursor: pointer;
     }
-    .btn-yes { background: #ff4b5c; color: #ffffff; }
-    .btn-yes:hover { background: #e04352; }
-    .btn-no { background: #cccccc; color: #333333; }
-    .cta { display: none; margin-top: 20px; }
-    .footer { font-size: 11px; color: #777; text-align: center; margin-top: 30px; line-height: 1.4; }
+
+    .btn-yes {
+      background: #e63946;
+      color: #fff;
+    }
+
+    .btn-no {
+      background: #ccc;
+      color: #444;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
-
-    <img src="https://images.unsplash.com/photo-1603415526960-f2f87f9e4231?fit=crop&w=800&q=80" 
-         alt="Smiling adults on phones" class="hero">
-
-    <h1 id="dynamic-headline">Meet Singles Looking to Connect Near You</h1>
-    <h2 id="dynamic-subheadline">Browse profiles of adults 18+ interested in chatting and meeting.</h2>
-
-    <p>
-      Connect with local singles nearby who are ready to chat and explore new connections. Easy signup, mobile friendly.
-    </p>
-
-    <ul>
-      <li>Adults only (18+)</li>
-      <li>Location-based matching</li>
-      <li>Free to browse profiles</li>
-      <li>Easy signup process</li>
-    </ul>
-
-    <div class="age-box">
-      <p><strong>Are you at least 18 years old?</strong></p>
-      <button class="btn btn-yes" onclick="showCTA()">Yes, I am 18+</button>
-      <button class="btn btn-no" onclick="window.location.href='https://www.google.com';">No, I am under 18</button>
-    </div>
-
-    <div class="cta" id="cta">
-      <a href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub2=pr_native_us"
-         target="_blank"
-         class="btn btn-yes">
-        View Available Profiles
-      </a>
-    </div>
-
-    <div class="footer">
-      18+ only.<br>
-      This site is for social discovery and entertainment purposes.<br>
-      No guarantees of meetings or relationships.<br>
-      Not affiliated with PlugRush or any dating platform.
-    </div>
-
+  <div class="container" id="step1">
+    <h1>⚠️ Adult Content Warning</h1>
+    <p>You must be 18+ to continue.</p>
+    <a class="btn btn-yes" onclick="showStep2()">I am 18+</a>
+    <a class="btn btn-no" href="https://www.google.com">Leave</a>
   </div>
 
-  <!-- USA GeoIP + Dynamic City/State -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $.get("https://ipapi.co/json/", function(response) {
-      if(response.country !== "US") {
-        window.location.href = "https://www.google.com"; // Redirect non-USA visitors
-      } else {
-        var city = response.city || "";
-        var region = response.region || "";
-        if(city && region) {
-          document.getElementById("dynamic-headline").innerText =
-            "Meet Singles in " + city + ", " + region + " Looking to Connect Near You";
-          document.getElementById("dynamic-subheadline").innerText =
-            "Browse profiles of adults 18+ in " + city + ", " + region + " interested in chatting and meeting.";
-        }
-      }
-    }, "json");
+  <div class="container hidden" id="step2">
+    <h1>🔥 Local Singles Are Online</h1>
+    <p>Meet real people near you looking to chat right now.</p>
+    <a class="btn btn-yes" href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">
+      View Profiles
+    </a>
+  </div>
 
-    function showCTA() {
-      document.getElementById('cta').style.display = 'block';
+  <script>
+    function showStep2() {
+      document.getElementById("step1").classList.add("hidden");
+      document.getElementById("step2").classList.remove("hidden");
     }
   </script>
 

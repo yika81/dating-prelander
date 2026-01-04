@@ -2,91 +2,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Local Singles Near You</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Local Singles</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-    }
+  .container {
+    max-width: 420px;
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative;
+  }
 
-    .container {
-      max-width: 420px;
-      margin: 40px auto;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  }
 
-    h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #222;
-    }
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #f8f8f8;
+  }
 
-    p {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 20px;
-    }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
 
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-    }
+  .btn-yes {
+    background: #ff4b5c;
+    color: #fff;
+  }
 
-    .btn-yes {
-      background: #e63946;
-      color: #fff;
-    }
+  .btn-yes:hover {
+    background: #ff2d3c;
+    transform: scale(1.05);
+  }
 
-    .btn-no {
-      background: #ccc;
-      color: #444;
-    }
+  .btn-no {
+    background: #ccc;
+    color: #444;
+    margin-top: 10px;
+  }
 
-    .hidden {
-      display: none;
-    }
-  </style>
+  .hidden { display: none; }
+
+  /* Optional small sparkle effect */
+  .sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/MsVtT0S.png') repeat;
+    pointer-events: none;
+    opacity: 0.1;
+    animation: shimmer 3s linear infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+  }
+</style>
 </head>
-
 <body>
 
-  <div class="container" id="step1">
-    <h1>⚠️ Adult Content Warning</h1>
-    <p>You must be 18+ to continue.</p>
-    <a class="btn btn-yes" onclick="showStep2()">I am 18+</a>
-    <a class="btn btn-no" href="https://www.google.com">Leave</a>
-  </div>
+<div class="sparkle"></div>
 
-  <div class="container hidden" id="step2">
-    <h1>🔥 Local Singles Are Online</h1>
-    <p>Meet real people near you looking to chat right now.</p>
-    <a class="btn btn-yes" href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">
-      View Profiles
-    </a>
-  </div>
+<!-- Step 1: Age Gate -->
+<div class="container" id="step1">
+  <h1>⚠️ Adult Content</h1>
+  <p>You must be 18+ to continue. Are you old enough?</p>
+  <a class="btn btn-yes" onclick="showStep2()">I am 18+</a>
+  <a class="btn btn-no" href="https://www.google.com">Leave</a>
+</div>
 
-  <script>
-    function showStep2() {
-      document.getElementById("step1").classList.add("hidden");
-      document.getElementById("step2").classList.remove("hidden");
-    }
-  </script>
+<!-- Step 2: Main CTA -->
+<div class="container hidden" id="step2">
+  <h1>🔥 Singles Near You Are Online!</h1>
+  <p>See who’s waiting to chat. Local singles are looking now — free to view.</p>
+  <a class="btn btn-yes" href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">View Profiles</a>
+</div>
+
+<script>
+function showStep2() {
+  document.getElementById("step1").classList.add("hidden");
+  document.getElementById("step2").classList.remove("hidden");
+}
+</script>
 
 </body>
 </html>

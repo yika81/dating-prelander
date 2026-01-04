@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,36 +18,20 @@
       margin: 0 auto;
       padding: 20px;
       background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 10px;
     }
-    h1 {
-      font-size: 24px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 16px;
-      font-weight: normal;
-      text-align: center;
-      margin-bottom: 20px;
-      color: #555;
-    }
-    p {
-      font-size: 14px;
-      line-height: 1.5;
+    h1 { font-size: 24px; text-align: center; margin-bottom: 10px; }
+    h2 { font-size: 16px; font-weight: normal; text-align: center; margin-bottom: 20px; color: #555; }
+    p { font-size: 14px; line-height: 1.5; margin-bottom: 15px; }
+    ul { padding-left: 20px; margin-bottom: 20px; }
+    ul li { font-size: 14px; margin-bottom: 8px; }
+    .hero {
+      width: 100%;
+      border-radius: 8px;
       margin-bottom: 15px;
     }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-    ul li {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-    .age-box {
-      text-align: center;
-      margin: 25px 0;
-    }
+    .age-box { text-align: center; margin: 25px 0; }
     .btn {
       display: block;
       width: 100%;
@@ -55,41 +40,30 @@
       font-size: 16px;
       text-align: center;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
+      transition: background 0.3s;
     }
-    .btn-yes {
-      background: #2d89ef;
-      color: #ffffff;
-    }
-    .btn-no {
-      background: #cccccc;
-      color: #333333;
-    }
-    .cta {
-      display: none;
-      margin-top: 20px;
-    }
-    .footer {
-      font-size: 11px;
-      color: #777;
-      text-align: center;
-      margin-top: 30px;
-      line-height: 1.4;
-    }
+    .btn-yes { background: #ff4b5c; color: #ffffff; }
+    .btn-yes:hover { background: #e04352; }
+    .btn-no { background: #cccccc; color: #333333; }
+    .cta { display: none; margin-top: 20px; }
+    .footer { font-size: 11px; color: #777; text-align: center; margin-top: 30px; line-height: 1.4; }
   </style>
 </head>
 <body>
 
   <div class="container">
 
-    <h1>Meet Singles Looking to Connect Near You</h1>
-    <h2>Browse profiles of adults 18+ interested in chatting and meeting.</h2>
+    <img src="https://images.unsplash.com/photo-1603415526960-f2f87f9e4231?fit=crop&w=800&q=80" 
+         alt="Smiling adults on phones" class="hero">
+
+    <h1 id="dynamic-headline">Meet Singles Looking to Connect Near You</h1>
+    <h2 id="dynamic-subheadline">Browse profiles of adults 18+ interested in chatting and meeting.</h2>
 
     <p>
-      Online dating platforms allow adults to connect based on location and shared interests.
-      Many people prefer browsing profiles before deciding who they want to talk to.
+      Connect with local singles nearby who are ready to chat and explore new connections. Easy signup, mobile friendly.
     </p>
 
     <ul>
@@ -101,15 +75,13 @@
 
     <div class="age-box">
       <p><strong>Are you at least 18 years old?</strong></p>
-
       <button class="btn btn-yes" onclick="showCTA()">Yes, I am 18+</button>
-      <button class="btn btn-no" onclick="window.location.href='https://www.google.com';">
-        No, I am under 18
-      </button>
+      <button class="btn btn-no" onclick="window.location.href='https://www.google.com';">No, I am under 18</button>
     </div>
 
     <div class="cta" id="cta">
       <a href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN&aff_sub2=pr_native_us"
+         target="_blank"
          class="btn btn-yes">
         View Available Profiles
       </a>
@@ -124,7 +96,24 @@
 
   </div>
 
+  <!-- USA GeoIP + Dynamic City/State -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
+    $.get("https://ipapi.co/json/", function(response) {
+      if(response.country !== "US") {
+        window.location.href = "https://www.google.com"; // Redirect non-USA visitors
+      } else {
+        var city = response.city || "";
+        var region = response.region || "";
+        if(city && region) {
+          document.getElementById("dynamic-headline").innerText =
+            "Meet Singles in " + city + ", " + region + " Looking to Connect Near You";
+          document.getElementById("dynamic-subheadline").innerText =
+            "Browse profiles of adults 18+ in " + city + ", " + region + " interested in chatting and meeting.";
+        }
+      }
+    }, "json");
+
     function showCTA() {
       document.getElementById('cta').style.display = 'block';
     }

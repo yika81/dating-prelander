@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>People Near You</title>
+<title>Someone Near You Is Online</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
   body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f2f4f8;
+    background: linear-gradient(135deg, #ff7a7a, #ffd194);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .wrap {
+  .card {
     background: #ffffff;
     max-width: 420px;
     width: 92%;
-    padding: 26px;
-    border-radius: 14px;
+    padding: 22px;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  }
+
+  .hero img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 16px;
   }
 
   .badge {
@@ -33,11 +39,11 @@
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 13px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 23px;
     color: #222;
     margin-bottom: 10px;
   }
@@ -45,35 +51,25 @@
   p {
     font-size: 16px;
     color: #555;
-    margin-bottom: 22px;
-  }
-
-  ul {
-    text-align: left;
-    margin: 0 0 22px 0;
-    padding-left: 18px;
-    color: #444;
-    font-size: 15px;
-  }
-
-  li {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   .cta {
     display: block;
     width: 100%;
     padding: 16px;
-    background: #2563eb;
+    background: #ff3d57;
     color: #fff;
     font-size: 18px;
     font-weight: bold;
     border-radius: 10px;
     text-decoration: none;
+    transition: all 0.2s ease;
   }
 
   .cta:hover {
-    background: #1e4fd6;
+    background: #e63249;
+    transform: scale(1.04);
   }
 
   .note {
@@ -86,29 +82,30 @@
 
 <body>
 
-<div class="wrap">
-  <div class="badge">Nearby Now</div>
+<div class="card">
 
-  <h1>People Near You Are Checking Profiles</h1>
+  <div class="hero">
+    <!-- Smiling woman, safe for native -->
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?fit=crop&w=800&q=80" alt="Smiling woman">
+  </div>
 
-  <p>We found active profiles close to your location.  
-  Tap below to see who’s online right now.</p>
+  <div class="badge">Online Now</div>
 
-  <ul>
-    <li>✔ Local profiles</li>
-    <li>✔ Active users</li>
-    <li>✔ Mobile friendly</li>
-  </ul>
+  <h1>She’s Looking for Someone Nearby</h1>
+
+  <p>A friendly woman near your location is online right now.  
+     Tap below to view nearby profiles and see who’s active.</p>
 
   <a class="cta"
      href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
      target="_blank">
-     See Nearby Profiles
+     View Nearby Profiles
   </a>
 
   <div class="note">
     Free to browse • Takes seconds
   </div>
+
 </div>
 
 </body>

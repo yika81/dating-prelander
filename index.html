@@ -2,133 +2,95 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Local Singles Near You</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meet Local Singles</title>
+
 <style>
   body {
     margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6a6a, #ffb347);
     min-height: 100vh;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .container {
+  .card {
+    background: #ffffff;
     max-width: 420px;
-    background: rgba(0,0,0,0.7);
-    padding: 30px;
-    border-radius: 20px;
+    width: 92%;
+    padding: 26px;
+    border-radius: 18px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    position: relative;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+  }
+
+  .image img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 20px;
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 24px;
+    color: #222;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
   }
 
   p {
     font-size: 16px;
-    margin-bottom: 20px;
-    color: #f8f8f8;
+    color: #555;
+    margin-bottom: 22px;
   }
 
-  .btn {
+  .cta {
     display: block;
     width: 100%;
     padding: 16px;
+    background: #ff3d57;
+    color: #fff;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 10px;
     text-decoration: none;
-    cursor: pointer;
-    transition: 0.25s;
+    transition: all 0.2s ease;
   }
 
-  .btn-yes {
-    background: #ff4b5c;
-    color: #fff;
+  .cta:hover {
+    background: #e63249;
+    transform: scale(1.04);
   }
 
-  .btn-yes:hover {
-    background: #ff2d3c;
-    transform: scale(1.05);
-  }
-
-  .btn-no {
-    background: #ccc;
-    color: #444;
-    margin-top: 10px;
-  }
-
-  .hidden { display: none; }
-
-  .image-section {
-    margin-bottom: 20px;
-  }
-
-  .image-section img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0px); }
-  }
-
-  .sparkle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.imgur.com/MsVtT0S.png') repeat;
-    pointer-events: none;
-    opacity: 0.08;
-    animation: shimmer 3s linear infinite;
-  }
-
-  @keyframes shimmer {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
+  .note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 14px;
   }
 </style>
 </head>
+
 <body>
 
-<div class="sparkle"></div>
-
-<!-- Step 1: Age Gate -->
-<div class="container" id="step1">
-  <h1>⚠️ Adult Content Warning</h1>
-  <p>You must be 18+ to continue. Are you old enough?</p>
-  <a class="btn btn-yes" onclick="showStep2()">I am 18+</a>
-  <a class="btn btn-no" href="https://www.google.com">Leave</a>
-</div>
-
-<!-- Step 2: Main CTA with image -->
-<div class="container hidden" id="step2">
-  <div class="image-section">
-    <img src="https://images.unsplash.com/photo-1596495577886-d920f5d23033?fit=crop&w=800&q=80" alt="Smiling adults">
+<div class="card">
+  <div class="image">
+    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?fit=crop&w=800&q=80" alt="Smiling adults">
   </div>
-  <h1>🔥 Local Singles Are Online!</h1>
-  <p>See who’s nearby and ready to chat. Free to view profiles instantly!</p>
-  <a class="btn btn-yes" href="https://t.crjmpx.com/386006/3785/0?bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">View Profiles</a>
-</div>
 
-<script>
-function showStep2() {
-  document.getElementById("step1").classList.add("hidden");
-  document.getElementById("step2").classList.remove("hidden");
-}
-</script>
+  <h1>Singles Near You Are Online</h1>
+  <p>Real people nearby are ready to connect.  
+     Browse profiles and see who’s interested right now.</p>
+
+  <a class="cta"
+     href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
+     target="_blank">
+     View Local Profiles
+  </a>
+
+  <div class="note">
+    Free to browse • Mobile friendly
+  </div>
+</div>
 
 </body>
 </html>

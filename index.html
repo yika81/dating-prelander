@@ -2,95 +2,146 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Singles Near You</title>
+<title>Discover Nearby Singles</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    background: #f4f6f9;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .container {
+  .card {
     background: #ffffff;
     max-width: 420px;
     width: 92%;
-    padding: 24px;
-    border-radius: 18px;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.15);
     text-align: center;
-    box-shadow: 0 14px 35px rgba(0,0,0,0.25);
   }
 
   .hero img {
     width: 100%;
-    border-radius: 14px;
-    margin-bottom: 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 22px;
     color: #222;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
-  .cta {
+  .step {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .btn {
     display: block;
     width: 100%;
-    padding: 16px;
-    background: #ff3d57;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
+    padding: 15px;
+    margin-bottom: 12px;
     border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
     text-decoration: none;
-    transition: all 0.2s ease;
+    cursor: pointer;
   }
 
-  .cta:hover {
+  .btn-primary {
+    background: #ff3d57;
+    color: #fff;
+  }
+
+  .btn-secondary {
+    background: #eef1f5;
+    color: #333;
+  }
+
+  .btn-primary:hover {
     background: #e63249;
-    transform: scale(1.04);
+  }
+
+  .btn-secondary:hover {
+    background: #dde2e8;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .note {
-    font-size: 13px;
+    font-size: 12px;
     color: #777;
-    margin-top: 14px;
+    margin-top: 10px;
   }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?fit=crop&w=800&q=80" alt="Smiling adults">
+<div class="card">
+
+  <!-- STEP 1 -->
+  <div id="step1">
+    <div class="hero">
+      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?fit=crop&w=800&q=80" alt="People smiling">
+    </div>
+
+    <h1>Singles Are Active Near You</h1>
+    <p>We found people nearby who are currently online and open to chatting.</p>
+
+    <div class="step">Step 1 of 2</div>
+
+    <a class="btn btn-primary" onclick="goStep2()">Continue</a>
   </div>
 
-  <h1>Singles Near You Are Online</h1>
-  <p>People nearby are ready to chat and connect.  
-     Browse profiles and see who’s interested right now.</p>
+  <!-- STEP 2 -->
+  <div id="step2" class="hidden">
+    <h1>Who Would You Like to See?</h1>
+    <p>Select an option below to view matching profiles.</p>
 
-  <a class="cta"
-     href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
-     target="_blank">
-     View Local Profiles
-  </a>
+    <div class="step">Step 2 of 2</div>
 
-  <div class="note">
-    Free to browse • Mobile friendly
+    <a class="btn btn-primary"
+       href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
+       target="_blank">
+       View Nearby Profiles
+    </a>
+
+    <a class="btn btn-secondary"
+       href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
+       target="_blank">
+       Browse All Profiles
+    </a>
+
+    <div class="note">
+      Free to explore • Mobile friendly
+    </div>
   </div>
+
 </div>
+
+<script>
+  function goStep2() {
+    document.getElementById('step1').classList.add('hidden');
+    document.getElementById('step2').classList.remove('hidden');
+  }
+</script>
 
 </body>
 </html>

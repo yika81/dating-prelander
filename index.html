@@ -2,146 +2,114 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Discover Nearby Singles</title>
+<title>People Near You</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f8;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .card {
+  .wrap {
     background: #ffffff;
     max-width: 420px;
     width: 92%;
-    padding: 22px;
-    border-radius: 16px;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+    padding: 26px;
+    border-radius: 14px;
     text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
-  .hero img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 16px;
+  .badge {
+    display: inline-block;
+    background: #ff3d57;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     color: #222;
-    margin-bottom: 8px;
-  }
-
-  p {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 18px;
-  }
-
-  .step {
-    font-size: 14px;
-    color: #888;
     margin-bottom: 10px;
   }
 
-  .btn {
+  p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 22px;
+  }
+
+  ul {
+    text-align: left;
+    margin: 0 0 22px 0;
+    padding-left: 18px;
+    color: #444;
+    font-size: 15px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .cta {
     display: block;
     width: 100%;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background: #ff3d57;
+    padding: 16px;
+    background: #2563eb;
     color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
   }
 
-  .btn-secondary {
-    background: #eef1f5;
-    color: #333;
-  }
-
-  .btn-primary:hover {
-    background: #e63249;
-  }
-
-  .btn-secondary:hover {
-    background: #dde2e8;
-  }
-
-  .hidden {
-    display: none;
+  .cta:hover {
+    background: #1e4fd6;
   }
 
   .note {
     font-size: 12px;
     color: #777;
-    margin-top: 10px;
+    margin-top: 14px;
   }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="wrap">
+  <div class="badge">Nearby Now</div>
 
-  <!-- STEP 1 -->
-  <div id="step1">
-    <div class="hero">
-      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?fit=crop&w=800&q=80" alt="People smiling">
-    </div>
+  <h1>People Near You Are Checking Profiles</h1>
 
-    <h1>Singles Are Active Near You</h1>
-    <p>We found people nearby who are currently online and open to chatting.</p>
+  <p>We found active profiles close to your location.  
+  Tap below to see who’s online right now.</p>
 
-    <div class="step">Step 1 of 2</div>
+  <ul>
+    <li>✔ Local profiles</li>
+    <li>✔ Active users</li>
+    <li>✔ Mobile friendly</li>
+  </ul>
 
-    <a class="btn btn-primary" onclick="goStep2()">Continue</a>
+  <a class="cta"
+     href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
+     target="_blank">
+     See Nearby Profiles
+  </a>
+
+  <div class="note">
+    Free to browse • Takes seconds
   </div>
-
-  <!-- STEP 2 -->
-  <div id="step2" class="hidden">
-    <h1>Who Would You Like to See?</h1>
-    <p>Select an option below to view matching profiles.</p>
-
-    <div class="step">Step 2 of 2</div>
-
-    <a class="btn btn-primary"
-       href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
-       target="_blank">
-       View Nearby Profiles
-    </a>
-
-    <a class="btn btn-secondary"
-       href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
-       target="_blank">
-       Browse All Profiles
-    </a>
-
-    <div class="note">
-      Free to explore • Mobile friendly
-    </div>
-  </div>
-
 </div>
-
-<script>
-  function goStep2() {
-    document.getElementById('step1').classList.add('hidden');
-    document.getElementById('step2').classList.remove('hidden');
-  }
-</script>
 
 </body>
 </html>

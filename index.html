@@ -1,152 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>People Near You Are Online</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>People Near You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #ff7a7a, #ffd194);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #ff5f6d, #ffc371);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  .card {
-    background: #ffffff;
-    max-width: 420px;
-    width: 92%;
-    padding: 22px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-  }
+    .container {
+      background: #ffffff;
+      max-width: 420px;
+      width: 92%;
+      padding: 24px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+    }
 
-  .hero img {
-    width: 100%;
-    border-radius: 14px;
-    margin-bottom: 16px;
-    transition: opacity 0.5s ease-in-out;
-  }
+    .hero img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 18px;
+    }
 
-  .badge {
-    display: inline-block;
-    background: #ff3d57;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
+    h1 {
+      font-size: 24px;
+      color: #222;
+      margin-bottom: 10px;
+    }
 
-  h1 {
-    font-size: 23px;
-    color: #222;
-    margin-bottom: 10px;
-  }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 22px;
+    }
 
-  p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-  }
+    .cta {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: #ff3d57;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
 
-  ul {
-    text-align: left;
-    margin: 0 0 22px 0;
-    padding-left: 18px;
-    color: #444;
-    font-size: 15px;
-  }
+    .cta:hover {
+      background: #e63249;
+      transform: scale(1.04);
+    }
 
-  li {
-    margin-bottom: 8px;
-  }
-
-  .cta {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    background: #ff3d57;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .cta:hover {
-    background: #e63249;
-    transform: scale(1.04);
-  }
-
-  .note {
-    font-size: 12px;
-    color: #777;
-    margin-top: 14px;
-  }
-</style>
+    .note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="card">
-
+<div class="container">
   <div class="hero">
-    <img id="heroImage" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=800&q=80" alt="Smiling person">
+    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=800&q=80" alt="Smiling people nearby">
   </div>
 
-  <div class="badge">Online Now</div>
+  <h1>People Near You Are Online</h1>
 
-  <h1>People Nearby Are Active</h1>
+  <p>
+    New profiles are joining in your area.  
+    Browse and see who’s active right now.
+  </p>
 
-  <p>Singles near your area are online and ready to connect.  
-     Tap below to see who’s currently active.</p>
-
-  <ul>
-    <li>✔ Local profiles</li>
-    <li>✔ Active users</li>
-    <li>✔ Free & mobile-friendly</li>
-  </ul>
-
+  <!-- CTA BUTTON (SOI OFFER ALREADY INSERTED) -->
   <a class="cta"
-     href="https://t.crjmpy.com/386006/3785/0?aff_sub=PlugRush-09Jan2026&bo=2753,2754,2755,2756&target=nativeads&po=6456&aff_sub5=SF_006OG000004lmDN"
+     href="https://t.crjmpy.com/386006/7524?aff_sub=Native2&bo=2753,2754,2755,2756&source=PlugRush&aff_sub5=SF_006OG000004lmDN"
      target="_blank">
-     View Active Profiles
+     View Local Profiles
   </a>
 
   <div class="note">
-    Connect in seconds • Free to browse
+    Free to join • Takes less than 30 seconds
   </div>
-
 </div>
-
-<script>
-  // Array of gender-neutral hero images
-  const images = [
-    "https://images.unsplash.com/photo-1607746882042-944635dfe10e?fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=800&q=80"
-  ];
-
-  let index = 0;
-  const hero = document.getElementById('heroImage');
-
-  // Rotate images every 4 seconds
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    hero.style.opacity = 0;
-    setTimeout(() => {
-      hero.src = images[index];
-      hero.style.opacity = 1;
-    }, 300);
-  }, 4000);
-</script>
 
 </body>
 </html>

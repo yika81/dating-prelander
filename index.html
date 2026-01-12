@@ -58,7 +58,7 @@
   p {
     font-size: 16px;
     color: #555;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     line-height: 1.4;
   }
 
@@ -106,10 +106,10 @@
     See who’s available and connect in seconds.
   </p>
 
-  <a class="cta"
+  <a id="ctaBtn" class="cta"
      href="https://t.crjmpy.com/386006/7524?aff_sub=Native2&bo=2753,2754,2755,2756&source=PlugRush&aff_sub5=SF_006OG000004lmDN"
      target="_blank">
-     Continue & View Profiles
+     View Nearby Profiles
   </a>
 
   <div class="note">
@@ -119,14 +119,30 @@
 </div>
 
 <script>
+  // Image rotation
   const images = document.querySelectorAll('.hero img');
-  let index = 0;
+  let imgIndex = 0;
 
   setInterval(() => {
-    images[index].classList.remove('active');
-    index = (index + 1) % images.length;
-    images[index].classList.add('active');
+    images[imgIndex].classList.remove('active');
+    imgIndex = (imgIndex + 1) % images.length;
+    images[imgIndex].classList.add('active');
   }, 3500);
+
+  // CTA text rotation
+  const ctaTexts = [
+    "View Nearby Profiles",
+    "See Who’s Active Near You",
+    "Unlock Local Matches"
+  ];
+
+  let ctaIndex = 0;
+  const ctaBtn = document.getElementById("ctaBtn");
+
+  setInterval(() => {
+    ctaIndex = (ctaIndex + 1) % ctaTexts.length;
+    ctaBtn.textContent = ctaTexts[ctaIndex];
+  }, 3000);
 </script>
 
 </body>
